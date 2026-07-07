@@ -7,58 +7,27 @@ public class GetCourse {
 		private String url;
 		private String services;
 		private String expertise;
-		private Courses Course;
+		private Courses courses;
 		private String instructor;
-		private String linkdIn;
+		private String linkedIn;
 
-		public String getUrl() {
-		    return url;
-		}
+		public String getUrl() {return url;}
+		public void setUrl(String url) {this.url = url;}
 
-		public void setUrl(String url) {
-		    this.url = url;
-		}
+		public String getServices() {return services;}
+		public void setServices(String services) {this.services = services;}
 
-		public String getServices() {
-		    return services;
-		}
+		public String getExpertise() {return expertise;}
+		public void setExpertise(String expertise) {this.expertise = expertise;}
 
-		public void setServices(String services) {
-		    this.services = services;
-		}
+		public Courses getCourses() {return courses;}
+		public void setCourses(Courses courses) {this.courses = courses;}
 
-		public String getExpertise() {
-		    return expertise;
-		}
+		public String getInstructor() { return instructor; }
+		public void setInstructor(String instructor) { this.instructor = instructor;}
 
-		public void setExpertise(String expertise) {
-		    this.expertise = expertise;
-		}
-
-		public Courses getCourse() {
-		    return Course;
-		}
-
-		public void setCourse(Courses course) {
-		    this.Course = course;
-		}
-
-		
-		public String getInstructor() {
-		    return instructor;
-		}
-
-		public void setInstructor(String instructor) {
-		    this.instructor = instructor;
-		}
-
-		public String getLinkdIn() {
-		    return linkdIn;
-		}
-
-		public void setLinkdIn(String linkdIn) {
-		    this.linkdIn = linkdIn;
-		}
+		 public String getLinkedIn() { return linkedIn; }
+   		 public void setLinkedIn(String linkedIn) { this.linkedIn = linkedIn; }
 		
 	}
 
