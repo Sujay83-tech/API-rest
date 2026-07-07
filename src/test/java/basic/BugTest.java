@@ -24,7 +24,11 @@ public class BugTest {
 					      + "}")
 					.log().all()
 					.post("rest/api/3/issue")
+<<<<<<< HEAD
 					.then().log().all() 
+=======
+					.then().log().all()
+>>>>>>> 2a14542de8e510673ce43515fbe61c0870b7309e
 					.assertThat().statusCode(201)
 					.contentType("application/json")
 					.extract().response().asString();
