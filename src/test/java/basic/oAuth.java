@@ -2,17 +2,13 @@ package basic;
 
 import static io.restassured.RestAssured.*;
 import io.restassured.path.json.JsonPath;
-
+import io.restassured.response.Response;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import org.testng.Assert;
-import pojo.Api;
-import pojo.Courses;
-import pojo.GetCourse;
-import pojo.Mobile;
-import pojo.WebAutomation;
+import pojo.*;
 
 public class oAuth {
 
@@ -80,5 +76,16 @@ public class oAuth {
         for (Mobile m : response1.getCourses().getMobile()) {
             System.out.println(m.getCourseTitle() + " - $" + m.getPrice());
         }
+
+
+        AddCoursePayload newCourse = new AddCoursePayload("Playwright with Java", "499", "api");
+
+        Response response2 = given()
+                .contentType("application/json")
+                .body(newCourse)                      // REST Assured auto-serializes this POJO to JSON
+                .when()
+                .post("https://rahulshettyacademy.com/oauthapi/addCourse")
+                .then().log().all()
+                .extract().response();
     }
 }
